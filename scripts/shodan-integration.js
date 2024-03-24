@@ -17,11 +17,11 @@
     // Per-page changes
     switch (get_page_type()) {
         case "as":
-            add_top_tab_item(`<img src="https://www.google.com/s2/favicons?sz=64&domain=shodan.io" style="width:16px;">`, `https://www.shodan.io/search?query=asn:${get_page_id()}`);
+            add_top_tab_item(`Shodan`, `https://www.shodan.io/search?query=asn:AS${get_page_id()}`);
             break;
         case "prefix":
             var prefix_urlencode = encodeURI(get_page_id());
-            add_top_tab_item(`<img src="https://www.google.com/s2/favicons?sz=64&domain=shodan.io" style="width:16px;">`, `https://www.shodan.io/search?query=net%3A%22${prefix_urlencode}%22`);
+            add_top_tab_item(`Shodan`, `https://www.shodan.io/search?query=net%3A%22${prefix_urlencode}%22`);
             break;
     }
 
